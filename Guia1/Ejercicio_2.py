@@ -94,7 +94,7 @@ class CompanySales:
 
 company = CompanySales()
 
-option = 0
+option = 0  
 
 while option != 6:
     print("\n------ MENU ------")
