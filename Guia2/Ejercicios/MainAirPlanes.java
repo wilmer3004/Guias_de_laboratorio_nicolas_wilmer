@@ -20,7 +20,7 @@ public class MainAirPlanes {
             System.out.println("3. Airplane with highest weekly sales");
             System.out.println("4. Airplane with lowest weekly sales");
             System.out.println("5. Best day for each airplane");
-            System.out.println("6. Increase by 20% sales below daily average");
+            System.out.println("6. 4");
             System.out.println("0. Exit");
             System.out.print("Option: ");
             option = sc.nextInt();
