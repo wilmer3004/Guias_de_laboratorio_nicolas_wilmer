@@ -26,24 +26,12 @@ public class MainAirPlanes {
             option = sc.nextInt();
 
             switch (option) {
-                case 1:
-                    system.readSales();
-                    break;
-                case 2:
-                    system.showMatrix();
-                    break;
-                case 3:
-                    system.airplaneWithHighestSales();
-                    break;
-                case 4:
-                    system.airplaneWithLowestSales();
-                    break;
-                case 5:
-                    system.bestDayPerAirplane();
-                    break;
-                case 6:
-                    system.increaseBelowDailyAverage();
-                    break;
+                case 1 -> system.readSales();
+                case 2 -> system.showMatrix();
+                case 3 -> system.airplaneWithHighestSales();
+                case 4 -> system.airplaneWithLowestSales();
+                case 5 -> system.bestDayPerAirplane();
+                case 6 -> system.increaseBelowDailyAverage();
             }
 
         } while (option != 0);

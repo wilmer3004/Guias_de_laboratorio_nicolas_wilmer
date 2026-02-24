@@ -29,25 +29,15 @@ public class MainClimateStation  {
 
             switch (option) {
 
-                case 1:
-                    station.readData();
-                    break;
+                case 1 -> station.readData();
 
-                case 2:
-                    station.showMaxBetween15And20();
-                    break;
+                case 2 -> station.showMaxBetween15And20();
 
-                case 3:
-                    station.showMinBelowZero();
-                    break;
+                case 3 -> station.showMinBelowZero();
 
-                case 4:
-                    station.showAverages();
-                    break;
+                case 4 -> station.showAverages();
 
-                case 5:
-                    station.showAllData();
-                    break;
+                case 5 -> station.showAllData();
             }
             
 
