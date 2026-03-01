@@ -46,7 +46,13 @@ public class Operators {
     System.out.println(false || true);
     System.out.println(true || true);
 
+    System.out.println(!true);
+    System.out.println(!false);
 
+    // Operadores unarios
+    System.out.println(b++);
+
+    
 
     }
 }

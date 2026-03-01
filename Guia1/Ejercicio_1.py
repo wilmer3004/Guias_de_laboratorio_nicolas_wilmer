@@ -186,5 +186,8 @@ class project_1:
 
 # -----------------------------
 # Main
-project = project_1()
-project.menu()
+# project = project_1()
+# project.menu()
+foo = (1, 2, 3)
+foo.index(0)
+
