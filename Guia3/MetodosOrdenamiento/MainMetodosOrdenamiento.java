@@ -1,4 +1,4 @@
-package MetodosOrdenamiento;
+package Guia3.MetodosOrdenamiento;
 /*
 Elabore un programa, en el ambiente de desarrollo NetBeans (Seguimos utilizando interfaz
 gráfica de usuario GUI y POO), que permita leer un arreglo de n números ingresados por teclado o
@@ -9,6 +9,7 @@ material que se compartió en sesiones anteriores de cada ordenamiento)
 
 import java.util.Scanner;
 import java.util.Random;
+import Guia3.MetodosOrdenamiento.Burbuja;
 
 public class MainMetodosOrdenamiento {
         
@@ -16,40 +17,55 @@ public class MainMetodosOrdenamiento {
     
     public static void menuDosOrdenamiento(int[] arreglo){
         int opcionMenuDos;
+        int [] arregloOriginal = arreglo.clone(); // Clonar el arreglo original para mantenerlo sin modificar
         do{
-            System.out.println("Menu de opciones de ordenamiento:");
-            System.out.println("1. Burbuja");
-            System.out.println("2. Inserción");
-            System.out.println("3. Selección");
-            System.out.println("4. Shell");
-            System.out.println("5. HeapSort");
-            System.out.println("6. Quick Sort");
-            System.out.println("7. Salir");
-            System.out.println("Ingrese su opción: ");
+
+            System.out.println("\n \n---------------------------------------------------------------\n" +
+            "                    MENU DE OPCIONES DE ORDENAMIENTO\n" +
+            "---------------------------------------------------------------\n" +
+            "Arreglo original: " + java.util.Arrays.toString(arregloOriginal) + "\n" +
+            "---------------------------------------------------------------\n" +
+            "| Opción | Algoritmo de Ordenamiento                         |\n" +
+            "---------------------------------------------------------------\n" +
+            "|   1    | Burbuja                                           |\n" +
+            "|   2    | Inserción                                         |\n" +
+            "|   3    | Selección                                         |\n" +
+            "|   4    | Shell                                             |\n" +
+            "|   5    | HeapSort                                          |\n" +
+            "|   6    | Quick Sort                                        |\n" +
+            "|   7    | Salir                                             |\n" +
+            "---------------------------------------------------------------\n" +
+            "Ingrese su opción:");
+
+
             opcionMenuDos = sc.nextInt();
             switch(opcionMenuDos){
             case 1:
-                System.out.println("Ordenando con el método de Burbuja...");
+                System.out.println("\n-------------Ordenando con el método de Burbuja-----------------");
+                    Burbuja burbuja = new Burbuja(arreglo);
+                    burbuja.ordenarBurbuja();
                 // Llamar al método de ordenamiento Burbuja
                 break;
             case 2:
-                System.out.println("Ordenando con el método de Inserción...");
+                System.out.println("\n-------------Ordenando con el método de Inserción-----------------");
+                Insercion insercion = new Insercion(arreglo);
+                insercion.ordenarInsercion();
                 // Llamar al método de ordenamiento Inserción
                 break;
             case 3:
-                System.out.println("Ordenando con el método de Selección...");
+                System.out.println("\n-------------Ordenando con el método de Selección-----------------");
                 // Llamar al método de ordenamiento Selección
                 break;
             case 4:
-                System.out.println("Ordenando con el método de Shell...");
+                System.out.println("\n-------------Ordenando con el método de Shell-----------------");
                 // Llamar al método de ordenamiento Shell
                 break;
             case 5:
-                System.out.println("Ordenando con el método de HeapSort...");
+                System.out.println("\n-------------Ordenando con el método de HeapSort-----------------");
                 // Llamar al método de ordenamiento HeapSort
                 break;
             case 6:
-                System.out.println("Ordenando con el método de Quick Sort...");
+                System.out.println("\n-------------Ordenando con el método de Quick Sort-----------------1");
                 // Llamar al método de ordenamiento Quick Sort
                 break;
             case 7:
@@ -74,12 +90,16 @@ public class MainMetodosOrdenamiento {
             System.out.println("Ingrese el tamaño del arreglo: ");
             n = sc.nextInt();
             arreglo = new int[n];
-
-            System.out.println("Menu de opciones:");
-            System.out.println("1. Ingresar los números por teclado");
-            System.out.println("2. Generar números aleatorios");
-            System.out.println("3. Salir");
-            System.out.println("Ingrese su opción: ");
+            System.out.println("\n\n---------------------------------------------\n" +
+            "                    MENU DE OPCIONES\n" +
+            "---------------------------------------------\n" +
+            "| Opción | Acción                           |\n" +
+            "---------------------------------------------\n" +
+            "|   1    | Ingresar los números por teclado |\n" +
+            "|   2    | Generar números aleatorios       |\n" +
+            "|   3    | Salir                            |\n" +
+            "---------------------------------------------\n" +
+            "Ingrese su opción:");
             opcionMenuUno = sc.nextInt();
 
             switch(opcionMenuUno){
