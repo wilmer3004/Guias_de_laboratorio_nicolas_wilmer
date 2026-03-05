@@ -54,18 +54,26 @@ public class MainMetodosOrdenamiento {
                 break;
             case 3:
                 System.out.println("\n-------------Ordenando con el método de Selección-----------------");
+                Seleccion seleccion = new Seleccion(arreglo);
+                seleccion.ordenarSeleccion();
                 // Llamar al método de ordenamiento Selección
                 break;
             case 4:
                 System.out.println("\n-------------Ordenando con el método de Shell-----------------");
+                Shell shell = new Shell(arreglo);
+                shell.ordenarShell();
                 // Llamar al método de ordenamiento Shell
                 break;
             case 5:
                 System.out.println("\n-------------Ordenando con el método de HeapSort-----------------");
+                HeapSort heapSort = new HeapSort(arreglo);
+                heapSort.ordenarHeapSort();
                 // Llamar al método de ordenamiento HeapSort
                 break;
             case 6:
                 System.out.println("\n-------------Ordenando con el método de Quick Sort-----------------1");
+                QuickSort quickSort = new QuickSort(arreglo);
+                quickSort.ordenarQuickSort();
                 // Llamar al método de ordenamiento Quick Sort
                 break;
             case 7:
@@ -82,57 +90,61 @@ public class MainMetodosOrdenamiento {
         Random r = new Random();
         int n;
         int[] arreglo ;
-        int opcionMenuUno;
+        int opcionMenuUno = 0;
 
         // Menu para ingresar el tamaño del arreglo y la forma de llenarlo
         do{
             System.out.println("-------------- Bienvenido al programa de ordenamiento --------------");
             System.out.println("Ingrese el tamaño del arreglo: ");
             n = sc.nextInt();
-            arreglo = new int[n];
-            System.out.println("\n\n---------------------------------------------\n" +
-            "                    MENU DE OPCIONES\n" +
-            "---------------------------------------------\n" +
-            "| Opción | Acción                           |\n" +
-            "---------------------------------------------\n" +
-            "|   1    | Ingresar los números por teclado |\n" +
-            "|   2    | Generar números aleatorios       |\n" +
-            "|   3    | Salir                            |\n" +
-            "---------------------------------------------\n" +
-            "Ingrese su opción:");
-            opcionMenuUno = sc.nextInt();
+            if(n >0){
+                arreglo = new int[n];
+                System.out.println("\n\n---------------------------------------------\n" +
+                "                    MENU DE OPCIONES\n" +
+                "---------------------------------------------\n" +
+                "| Opción | Acción                           |\n" +
+                "---------------------------------------------\n" +
+                "|   1    | Ingresar los números por teclado |\n" +
+                "|   2    | Generar números aleatorios       |\n" +
+                "|   3    | Salir                            |\n" +
+                "---------------------------------------------\n" +
+                "Ingrese su opción:");
+                opcionMenuUno = sc.nextInt();
 
-            switch(opcionMenuUno){
-                case 1:
-                    System.out.println("Ingrese manualmente los numeros del arreglo;");
-                    for(int i = 0; i<n; i++){
-                        System.out.println("Ingrese el numero " + (i+1) + ": ");
-                        arreglo[i] = sc.nextInt();
-                    }
-                    menuDosOrdenamiento(arreglo);
-                    break;
+                switch(opcionMenuUno){
+                    case 1:
+                        System.out.println("Ingrese manualmente los numeros del arreglo;");
+                        for(int i = 0; i<n; i++){
+                            System.out.println("Ingrese el numero " + (i+1) + ": ");
+                            arreglo[i] = sc.nextInt();
+                        }
+                        menuDosOrdenamiento(arreglo);
+                        break;
 
-                case 2:
-                    System.out.println("Generando numeros aleatorios...");
-                    for(int i = 0; i<n; i++){
-                        arreglo[i] = r.nextInt(100); // Genera números aleatorios entre 0 y 99
-                    }
-                    System.out.println("Numeros generados: ");
-                    for(int num : arreglo){
-                        System.out.print(num + " ");
-                    }
-                    System.out.println();
-                    menuDosOrdenamiento(arreglo);
-                    break;
-                case 3:
-                    System.out.println("Saliendo del programa...");
-                    break;
-                default:
-                    System.out.println("Opción no válida. Por favor, ingrese una opción del 1 al 3.");
+                    case 2:
+                        System.out.println("Generando numeros aleatorios...");
+                        for(int i = 0; i<n; i++){
+                            arreglo[i] = r.nextInt(100); // Genera números aleatorios entre 0 y 99
+                        }
+                        System.out.println("Numeros generados: ");
+                        for(int num : arreglo){
+                            System.out.print(num + " ");
+                        }
+                        System.out.println();
+                        menuDosOrdenamiento(arreglo);
+                        break;
+                    case 3:
+                        System.out.println("Saliendo del programa...");
+                        break;
+                    default:
+                        System.out.println("Opción no válida. Por favor, ingrese una opción del 1 al 3.");
+                }
             }
-
-            
-            
+                else{
+                    System.out.println("El tamaño del arreglo debe ser mayor a 0. Por favor, ingrese un número válido.");
+                }
+                
+                
         }while(opcionMenuUno != 3);
 
 
