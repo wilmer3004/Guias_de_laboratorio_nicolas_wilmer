@@ -117,7 +117,8 @@ public class MainMetodosOrdenamiento {
                 "---------------------------------------------\n" +
                 "|   1    | Ingresar los números por teclado |\n" +
                 "|   2    | Generar números aleatorios       |\n" +
-                "|   3    | Salir                            |\n" +
+                "|   3    | Prueba de rendimiento            |\n" +
+                "|   4    | Salir                            |\n" +
                 "---------------------------------------------\n" +
                 "Ingrese su opción:");
                 opcionMenuUno = sc.nextInt();
@@ -145,6 +146,12 @@ public class MainMetodosOrdenamiento {
                         menuDosOrdenamiento(arreglo);
                         break;
                     case 3:
+                        System.out.println("Realizando prueba de rendimiento...");
+                        // Generar un arreglo grande para la prueba de rendimiento
+                        PruebaRendimiento.pruebaRendimiento();
+                        break;
+
+                    case 4:
                         System.out.println("Saliendo del programa...");
                         break;
                     default:
@@ -156,13 +163,14 @@ public class MainMetodosOrdenamiento {
                 }
                 
                 
-        }while(opcionMenuUno != 3);
+        }while(opcionMenuUno != 4);
 
 
 
         sc.close();
 
     }
+    
 
     
     

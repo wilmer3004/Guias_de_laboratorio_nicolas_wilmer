@@ -26,7 +26,7 @@ public class QuickSort {
 
     // Método para ordenar el arreglo utilizando el método de Quick Sort
 
-    public void ordenarQuickSort(){
+    public double ordenarQuickSort(){
         long inicio = System.nanoTime(); // iniciar tiempo
         quickSort(arreglo, 0, arreglo.length - 1);
         long fin = System.nanoTime(); // finalizar tiempo
@@ -34,6 +34,7 @@ public class QuickSort {
         imprimir1.imprimir(arreglo);
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
+        return (double) tiempo / 1_000_000.0;
     }
 
     // Método Quick Sort

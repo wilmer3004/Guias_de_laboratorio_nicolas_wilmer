@@ -25,7 +25,7 @@ public class HeapSort {
     }
 
     // Método HeapSort
-    public void ordenarHeapSort(){
+    public double ordenarHeapSort(){
         int n = arreglo.length;
         long inicio = System.nanoTime(); // iniciar tiempo
 
@@ -54,6 +54,8 @@ public class HeapSort {
 
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
+
+        return (double) tiempo / 1_000_000.0;
     }
 
     // Método para mantener la propiedad del heap

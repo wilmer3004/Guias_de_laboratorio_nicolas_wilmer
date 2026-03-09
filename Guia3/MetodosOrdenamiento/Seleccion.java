@@ -23,7 +23,7 @@ public class Seleccion {
         this.arreglo1 = arreglo;}
 
     // Metodo de ordenamiento por selección
-    public void ordenarSeleccion(){
+    public double ordenarSeleccion(){
         int n = arreglo1.length;
         long inicio = System.nanoTime(); // iniciar tiempo
         for (int i = 0; i < n-1; i++){
@@ -42,6 +42,9 @@ public class Seleccion {
         long tiempo = fin - inicio;
         imprimir1.imprimir(arreglo1);
         System.out.println();
-        System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");}
+        System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
+        return (double) tiempo / 1_000_000.0;
+    }
+        
 
 }

@@ -26,7 +26,7 @@ public class Burbuja {
     }
 
     // Metodo de ordenamiento burbuja
-    public void ordenarBurbuja(){
+    public double ordenarBurbuja(){
 
         int n = arreglo1.length;
         long inicio = System.nanoTime(); // iniciar tiempo
@@ -48,5 +48,6 @@ public class Burbuja {
         imprimir1.imprimir(arreglo1);
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
+        return (double) tiempo / 1_000_000.0;
         }   
     }

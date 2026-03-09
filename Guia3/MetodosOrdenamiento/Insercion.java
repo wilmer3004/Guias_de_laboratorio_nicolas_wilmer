@@ -24,7 +24,7 @@ public class Insercion {
     }
 
     // Metodo de ordenamiento por inserción
-    public void ordenarInsercion(){
+    public double ordenarInsercion(){
         int n = arreglo1.length;
         long inicio = System.nanoTime(); // iniciar tiempo
         
@@ -46,6 +46,7 @@ public class Insercion {
         imprimir1.imprimir(arreglo1);
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
+        return (double) tiempo / 1_000_000.0;
     }
 
     

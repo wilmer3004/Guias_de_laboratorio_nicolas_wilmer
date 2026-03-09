@@ -26,7 +26,7 @@ public class Shell {
     }
 
     // Método para ordenar el arreglo utilizando el método de Shell
-    public void ordenarShell(){
+    public double ordenarShell(){
         int n = arreglo.length;
         long inicio = System.nanoTime(); // iniciar tiempo
         // Comenzar con un intervalo grande, luego reducirlo
@@ -47,5 +47,6 @@ public class Shell {
         long tiempo = fin - inicio;
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
+        return (double) tiempo / 1_000_000.0;
     }
 }
