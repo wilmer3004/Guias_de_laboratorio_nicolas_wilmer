@@ -4,6 +4,8 @@ public class Insercion {
 
     //Variables
     private int[] arreglo1;
+    final ImprimirTabla imprimir1 = new ImprimirTabla();
+
     
     // Metodo constructor vacío
     public Insercion(){}
@@ -41,10 +43,7 @@ public class Insercion {
         long fin = System.nanoTime(); // terminar tiempo
         long tiempo = fin - inicio;
 
-
-        for (int num : arreglo1) {
-            System.out.print(num + " ");
-        }
+        imprimir1.imprimir(arreglo1);
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
     }

@@ -10,32 +10,43 @@ material que se compartió en sesiones anteriores de cada ordenamiento)
 import java.util.Scanner;
 import java.util.Random;
 import Guia3.MetodosOrdenamiento.Burbuja;
+import Guia3.MetodosOrdenamiento.Insercion;
+import Guia3.MetodosOrdenamiento.Seleccion;
+import Guia3.MetodosOrdenamiento.Shell;
+import Guia3.MetodosOrdenamiento.HeapSort;
+import Guia3.MetodosOrdenamiento.QuickSort;
+import Guia3.MetodosOrdenamiento.ImprimirTabla;
 
 public class MainMetodosOrdenamiento {
         
     static Scanner sc = new Scanner(System.in);
+    static final ImprimirTabla imprimir = new ImprimirTabla();
     
     public static void menuDosOrdenamiento(int[] arreglo){
         int opcionMenuDos;
         int [] arregloOriginal = arreglo.clone(); // Clonar el arreglo original para mantenerlo sin modificar
         do{
 
-            System.out.println("\n \n---------------------------------------------------------------\n" +
-            "                    MENU DE OPCIONES DE ORDENAMIENTO\n" +
-            "---------------------------------------------------------------\n" +
-            "Arreglo original: " + java.util.Arrays.toString(arregloOriginal) + "\n" +
-            "---------------------------------------------------------------\n" +
-            "| Opción | Algoritmo de Ordenamiento                         |\n" +
-            "---------------------------------------------------------------\n" +
-            "|   1    | Burbuja                                           |\n" +
-            "|   2    | Inserción                                         |\n" +
-            "|   3    | Selección                                         |\n" +
-            "|   4    | Shell                                             |\n" +
-            "|   5    | HeapSort                                          |\n" +
-            "|   6    | Quick Sort                                        |\n" +
-            "|   7    | Salir                                             |\n" +
-            "---------------------------------------------------------------\n" +
-            "Ingrese su opción:");
+        System.out.println("\n\n---------------------------------------------------------------");
+        System.out.println("               MENU DE OPCIONES DE ORDENAMIENTO");
+        System.out.println("---------------------------------------------------------------");
+
+        System.out.println("Arreglo original:");
+        imprimir.imprimir(arregloOriginal);
+
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("| Opción | Algoritmo de Ordenamiento                         |");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("|   1    | Burbuja                                           |");
+        System.out.println("|   2    | Inserción                                         |");
+        System.out.println("|   3    | Selección                                         |");
+        System.out.println("|   4    | Shell                                             |");
+        System.out.println("|   5    | HeapSort                                          |");
+        System.out.println("|   6    | Quick Sort                                        |");
+        System.out.println("|   7    | Salir                                             |");
+        System.out.println("---------------------------------------------------------------");
+        System.out.print("Ingrese su opción: ");
+
 
 
             opcionMenuDos = sc.nextInt();

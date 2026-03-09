@@ -4,6 +4,8 @@ public class QuickSort {
 
     //variables
     private int[] arreglo;
+    final ImprimirTabla imprimir1 = new ImprimirTabla();
+
 
     // Metodo constructor vacío
     public QuickSort(){}
@@ -29,9 +31,7 @@ public class QuickSort {
         quickSort(arreglo, 0, arreglo.length - 1);
         long fin = System.nanoTime(); // finalizar tiempo
         long tiempo = fin - inicio;
-        for (int num : arreglo) {
-            System.out.print(num + " ");
-        }
+        imprimir1.imprimir(arreglo);
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
     }

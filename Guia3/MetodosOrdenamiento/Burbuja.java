@@ -1,9 +1,11 @@
 package Guia3.MetodosOrdenamiento;
+import Guia3.MetodosOrdenamiento.ImprimirTabla;
 
 public class Burbuja {
 
     //Variables
     private int[] arreglo1;
+    final ImprimirTabla imprimir1 = new ImprimirTabla();
 
     // Metodo constructor vacío
     public Burbuja(){
@@ -43,9 +45,7 @@ public class Burbuja {
         long fin = System.nanoTime(); // terminar tiempo
         long tiempo = fin - inicio;
 
-        for (int i=0; i<n; i++){
-            System.out.print(" "+ arreglo1[i] + " ");
-        }
+        imprimir1.imprimir(arreglo1);
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");
         }   

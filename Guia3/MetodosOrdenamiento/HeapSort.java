@@ -4,6 +4,8 @@ public class HeapSort {
 
     // Variables
     private int[] arreglo;
+    final ImprimirTabla imprimir1 = new ImprimirTabla();
+
 
     // Constructor vacío
     public HeapSort(){}
@@ -48,9 +50,7 @@ public class HeapSort {
         long tiempo = fin - inicio;
 
         // Mostrar arreglo ordenado
-        for (int num : arreglo) {
-            System.out.print(num + " ");
-        }
+        imprimir1.imprimir(arreglo);
 
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");

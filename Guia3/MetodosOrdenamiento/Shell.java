@@ -4,6 +4,8 @@ public class Shell {
 
     //variables
     private int[] arreglo;
+    final ImprimirTabla imprimir1 = new ImprimirTabla();
+
     
     // Metodo constructor vacío
     public Shell(){}
@@ -41,9 +43,7 @@ public class Shell {
         }
         long fin = System.nanoTime(); // finalizar tiempo
         
-        for (int i=0; i<n; i++){
-            System.out.print(" "+ arreglo[i] + " ");
-        }
+        imprimir1.imprimir(arreglo);
         long tiempo = fin - inicio;
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");

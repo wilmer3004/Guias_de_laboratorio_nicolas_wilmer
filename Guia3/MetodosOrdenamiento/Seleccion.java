@@ -4,6 +4,8 @@ public class Seleccion {
 
     // variables
     private int[] arreglo1;
+    final ImprimirTabla imprimir1 = new ImprimirTabla();
+
 
     // Metodo constructor vacío
     public Seleccion(){}
@@ -38,9 +40,7 @@ public class Seleccion {
         }
         long fin = System.nanoTime(); // terminar tiempo
         long tiempo = fin - inicio;
-        for (int num : arreglo1) {
-            System.out.print(num + " ");
-        }
+        imprimir1.imprimir(arreglo1);
         System.out.println();
         System.out.println("\n --------------Tiempo de ejecución: " + (tiempo / 1_000_000.0) + " ms---------------- \n");}
 
