@@ -6,7 +6,7 @@ public class PruebaRendimiento {
 
     public static void pruebaRendimiento(){
 
-        int[] tamanos = {1000, 5000, 100000};
+        int[] tamanos = {1000, 5000, 100000,1000000,10000000};
         Random r = new Random();
 
         // matriz para guardar los resultados
