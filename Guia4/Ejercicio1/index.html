@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba de Algoritmos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>📊 Prueba de Algoritmos</h1>
+
+    <!-- 🔥 EXPLICACIÓN VISIBLE -->
+    <h3>
+        Este programa compara el rendimiento del algoritmo QuickSort y la búsqueda binaria 
+        sobre arreglos de diferentes tamaños. Los datos se generan aleatoriamente, luego 
+        se ordenan utilizando QuickSort y posteriormente se aplica búsqueda binaria. 
+        Los tiempos de ejecución se muestran en la tabla y se representan gráficamente 
+        para analizar su comportamiento.
+    </h3>
+
+    <button onclick="ejecutarPruebas()">Ejecutar Pruebas</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tamaño</th>
+                <th>QuickSort (ms)</th>
+                <th>Búsqueda Binaria (ms)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>100</td>
+                <td id="qs-100">-</td>
+                <td id="bs-100">-</td>
+            </tr>
+            <tr>
+                <td>1.000</td>
+                <td id="qs-1000">-</td>
+                <td id="bs-1000">-</td>
+            </tr>
+            <tr>
+                <td>5.000</td>
+                <td id="qs-5000">-</td>
+                <td id="bs-5000">-</td>
+            </tr>
+            <tr>
+                <td>10.000</td>
+                <td id="qs-10000">-</td>
+                <td id="bs-10000">-</td>
+            </tr>
+            <tr>
+                <td>100.000</td>
+                <td id="qs-100000">-</td>
+                <td id="bs-100000">-</td>
+            </tr>
+            <tr>
+                <td>1.000.000</td>
+                <td id="qs-1000000">-</td>
+                <td id="bs-1000000">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="contenedor-graficas">
+    <div class="contenedor-grafica">
+        <h2>Gráfica QuickSort</h2>
+        <canvas id="graficaQuick"></canvas>
+    </div>
+
+    <div class="contenedor-grafica">
+        <h2>Gráfica Búsqueda Binaria</h2>
+        <canvas id="graficaBinaria"></canvas>
+    </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
